@@ -1,0 +1,15 @@
+# Ignore common weights and model files
+*.safetensors
+*.pt
+*.ckpt
+*.bin
+*.pth
+
+# Ignore cache directories and files
+.cache/
+**/__pycache__/
+*.cache
+.cache
+
+# Git objects
+.git/objects/
