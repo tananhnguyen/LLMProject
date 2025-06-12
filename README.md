@@ -33,21 +33,24 @@ It covers fine-tuning LLaMA-2 on SQuAD 2.0, distillation to MiniLM for efficient
 ---
 
 ## 📚 Project Structure
+
+```
 NLP_PROJECT/
-├── data_utils.py # Data loading and preprocessing (SQuAD v2)
-├── model_utils.py # Load MiniLM model and tokenizer
-├── metrics.py # SQuAD metrics (Exact Match, F1)
-├── train_student.py # Train MiniLM (student) model
-├── evaluate.py # Evaluate on SQuAD v2 validation set
-├── inference.py # Run QA on new examples
-├── plotting.py # Visualize training/evaluation results
-├── chatbot.py # Main agent script, async requests to vLLM/MCP
-├── mcp_server.py # MCP server (FastAPI), tool management
-├── translate_tool.py # Translation tools (NLLB, Google API)
-├── pubmed_tool.py # PubMed API access tool
-├── large_llm.py # RoBERTa-based QA pipeline example
-├── student/ # Model checkpoints, tokenizer, configs
-└── models/ # LLM weights, configs for deployment
+├── data_utils.py         # SQuAD v2 data loading and preprocessing
+├── model_utils.py        # MiniLM model and tokenizer utilities
+├── metrics.py            # SQuAD metrics: Exact Match, F1
+├── train_student.py      # Knowledge distillation: train MiniLM student
+├── evaluate.py           # Evaluate model on SQuAD v2 validation
+├── inference.py          # Run QA inference on new data
+├── plotting.py           # Plot training and evaluation metrics
+├── chatbot.py            # Main chatbot agent; async vLLM/MCP requests
+├── mcp_server.py         # FastAPI MCP server; tool routing
+├── translate_tool.py     # Translation tools (NLLB, Google Translate)
+├── pubmed_tool.py        # PubMed API integration
+├── large_llm.py          # RoBERTa-based QA pipeline example
+├── student/              # MiniLM checkpoints, tokenizer, configs
+└── models/               # LLM weights and configs for deployment
+```
 
 
 ---
